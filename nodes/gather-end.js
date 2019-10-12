@@ -4,7 +4,7 @@ module.exports = function(RED) {
 		var node = this;
 		node.on('input', function(msg) {
 			msg.payload.twiml += '</Gather>';
-			msg.payload.twiml += '<Redirect method="POST">' + msg.session.baseUrl + '/router</Redirect>';
+			// msg.payload.twiml += '<Redirect method="POST">' + msg.session.baseUrl + '/router</Redirect>';
 			node.send(msg);
 	    });
     }
